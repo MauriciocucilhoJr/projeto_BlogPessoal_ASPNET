@@ -32,6 +32,9 @@ namespace BlogAPI
             services.AddDbContext<BlogPessoalContexto>(opt => opt.UseSqlServer(Configuration["ConnectionStringsDev:DefaultConnection"]));
             // Repositorios
             services.AddScoped<IUsuario, UsuarioRepositorio>();
+            services.AddScoped<ITema, TemaRepositorio>();
+            services.AddScoped<IPostagem, PostagemRepositorio>();
+
             // Controladores
             services.AddCors();
             services.AddControllers();
