@@ -36,6 +36,8 @@ namespace BlogAPI.Src.Repositorios.Implementacoes
                 Nome = usuario.Nome,
                 Senha = usuario.Senha,
                 Foto = usuario.Foto
+                Tipo = usuario.Tipo
+
             });
             await _contexto.SaveChangesAsync();
         }

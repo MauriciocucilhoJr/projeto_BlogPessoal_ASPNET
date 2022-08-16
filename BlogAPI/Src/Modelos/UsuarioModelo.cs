@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
-
+using BlogAPI.Src.Utilidades;
 
 namespace BlogAPI.Src.Modelos
 {
@@ -23,6 +23,9 @@ namespace BlogAPI.Src.Modelos
         public string Email { get; set; }
         public string Senha { get; set; }
         public string Foto { get; set; }
+
+        [Required]
+        public TipoUsuario Tipo { get; set; }
         #endregion
 
         [JsonIgnore, InverseProperty("Criador")]
